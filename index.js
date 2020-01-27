@@ -57,7 +57,6 @@ const womanCat = {
   hasTail: true,
   saying: cat.saying
 };
-const Arr = [dog, cat, man, woman, womanCat];
 
 function objToString(obj) {
   let str = "";
@@ -69,7 +68,7 @@ function objToString(obj) {
   return str;
 }
 
-Arr.forEach(el => {
+[dog, cat, man, woman, womanCat].forEach(el => {
   print(objToString(el));
 });
 
