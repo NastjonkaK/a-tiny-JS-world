@@ -8,6 +8,69 @@
 // ======== OBJECTS DEFINITIONS ========
 // Define your objects here
 
+const dog = {
+  type: "dog",
+  name: "Charlie",
+  gender: "male",
+  legs: 4,
+  hands: 0,
+  hasTail: true,
+  saying: "woof-woof"
+};
+
+const cat = {
+  type: "cat",
+  name: "Luna",
+  gender: "female",
+  legs: 4,
+  hands: 0,
+  hasTail: true,
+  saying: "meow-meow"
+};
+
+const man = {
+  type: "human",
+  name: "Max",
+  gender: "male",
+  legs: 2,
+  hands: 2,
+  hasTail: false,
+  saying: "Hello everybody!"
+};
+
+const woman = {
+  type: "human",
+  name: "Emma",
+  gender: "female",
+  legs: 2,
+  hands: 2,
+  hasTail: false,
+  saying: "Have a nice day!"
+};
+
+const womanCat = {
+  type: "human-cat",
+  name: "Phoebe",
+  gender: "female",
+  legs: 2,
+  hands: 2,
+  hasTail: true,
+  saying: cat.saying
+};
+
+function objToString(obj) {
+  let str = "";
+  for (let p in obj) {
+    if (obj.hasOwnProperty(p)) {
+      str += p + ": " + obj[p] + "; ";
+    }
+  }
+  return str;
+}
+
+[dog, cat, man, woman, womanCat].forEach(el => {
+  print(objToString(el));
+});
 
 // ======== OUTPUT ========
 /* Use print(message) for output.
@@ -27,5 +90,3 @@
    print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny');
    print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny', 'div');
    */
-
-
