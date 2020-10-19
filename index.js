@@ -7,11 +7,11 @@ class Creature {
   }
 
   getIntroducing() {
-     return `\Hello! I am a ${this.type}, ${this.gender}. My name is ${this.name}.`
+     return `\'Hello! I am a ${this.type}, ${this.gender}. My name is ${this.name}.`
     }
 
   getSaying(){
-    return `\And I want to say: "${this.saying}".`
+    return `And I want to say: "${this.saying}".\'`
   }
 }
 
@@ -22,7 +22,7 @@ class Animal extends Creature {
   }
 
   getGreeting() {
-    return `\ ${this.getIntroducing()} I have ${this.paws} paws and a tail. ${this.getSaying()}`;
+    return `${this.getIntroducing()} I have ${this.paws} paws and a tail. ${this.getSaying()}`;
   }
 }
 
@@ -34,7 +34,7 @@ class Human extends Creature {
   }
 
   getGreeting() {
-    return `\ ${this.getIntroducing()}  I have ${this.legs} legs and ${this.hands} hands. ${this.getSaying()}`;
+    return `${this.getIntroducing()}  I have ${this.legs} legs and ${this.hands} hands. ${this.getSaying()}`;
   }
 }
 
@@ -72,7 +72,7 @@ class WomanCat extends Cat {
   }
 
   getGreeting() {
-    return `\ ${this.getIntroducing()} I have ${this.legs} legs, ${this.hands} hands and a tail. ${this.getSaying()}`;
+    return `${this.getIntroducing()} I have ${this.legs} legs, ${this.hands} hands and a tail. ${this.getSaying()}`;
   }
 }
 
